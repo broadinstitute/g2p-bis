@@ -1,5 +1,5 @@
 # G2P-BIS Genomics To Proteins - Bio Integration Suite
-A suite of tools and algorithms used by Genomics 2 Proteins portal to integrate and align genomics and protein data.
+A suite of tools and algorithms used by [Genomics 2 Proteins portal](https://g2p.broadinstitute.org) to integrate and align genomics and protein data.
 
 ## Pairwise Isoform Sequence Alignment
 For pairwise isoform sequence alignment, Genomics To Proteins portal uses Gotoh's optimization for the Needleman-Wunsch algorithm. The implementation uses a gap open penalty of -12 and gap extend penalty of -1, as described in biopython based on Durbin et al's description. For isoform alignment, the implementation uses a mismatch penalty of -20 and a match reward of +1, as opposed to the BLASTP matrix commonly used for other peptides. The reason for this is that in the case of an isoform alignment for genetic interpretation, the purpose of the alignment is to identify identical sequences resulting from translation of the same exon shared between isoforms. 
