@@ -1,0 +1,14 @@
+{
+  "name": "g2p-bis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "alignment.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+  }
+}
