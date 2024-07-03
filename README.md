@@ -13,7 +13,7 @@ Proteins are complex molecules that rely on various types of interactions to mai
 1. **Disulfide Bonds**
 1. **Salt Bridges**
 
-These interactions play critical roles in stabilizing protein structures and facilitating biological functions. Hydrogen bonds, nonbonding interactions, and disulfide bonds are calculated from HBPLUSv.3.06 software (https://www.ebi.ac.uk/thornton-srv/software/HBPLUS/). Salt-bridges are calculated from the included python script (src/salt_bridges.py)
+These interactions play critical roles in stabilizing protein structures and facilitating biological functions. Hydrogen bonds, nonbonding interactions, and disulfide bonds are calculated from HBPLUSv.3.06 software (https://www.ebi.ac.uk/thornton-srv/software/HBPLUS/). Salt-bridges are calculated from the included python script (src/PPI_salt_bridges.py)
 
 ### Interaction Types
 
