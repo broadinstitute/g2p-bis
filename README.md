@@ -1,6 +1,11 @@
 # G2P-BIS Genomics To Proteins - Bio Integration Suite
 A suite of tools and algorithms used by [Genomics 2 Proteins portal](https://g2p.broadinstitute.org) to integrate and align genomics and protein data.
 
+
+If you use these tools, please cite:
+
+Kwon S, et al. Genomics 2 Proteins portal: A resource and discovery tool for linking genetic screening outputs to protein sequences and structures. doi: https://doi.org/10.1101/2024.01.02.573913.
+
 ## Protein-Protein Interactions
 
 ### Introduction
