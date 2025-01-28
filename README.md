@@ -14,7 +14,7 @@ or, if you prefer the `BibTeX` format:
 ```
 @article{kwon_genomics_2024,
 	author = {Kwon, Seulki and Safer, Jordan and Nguyen, Duyen T. and Hoksza, David and May, Patrick and Arbesfeld, Jeremy A. and Rubin, Alan F. and Campbell, Arthur J. and Burgin, Alex and Iqbal, Sumaiya},
-	title = {Genomics 2 {Proteins} portal: a resource and discovery tool for linking genetic screening outputs to protein sequences and structures},
+	title = {Genomics 2 Proteins portal: a resource and discovery tool for linking genetic screening outputs to protein sequences and structures},
 	journal = {Nature Methods},
 	volume = {21},
 	pages = {1947--1957},
