@@ -79,11 +79,6 @@ Durbin R, Eddy SR, Krogh A, Mitchison G. Biological Sequence Analysis: Probabili
 
 Cock, P.J.A. et al. Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics 2009 Jun 1; 25(11) 1422-3 https://doi.org/10.1093/bioinformatics/btp163 pmid:19304878
 
-## Pocket annotations
-For pocket detection and assigment, pockets are detected on AlphaFold structures using [fpocket](https://github.com/Discngine/fpocket). Pockets are ranked according the the computed fpocket druggability score, and if a residue participates in multiple pockets, it is annotated with the pocket with the highest druggability score. fpocket computes the list of residues which form the boundaries of a pocket as part of its computation. Metadata computed by fpocket is shown in the portal for each pocket. The metadata shown is: druggability score, pocket volume in cubic angstroms and the mean pLDDT of residues making up the pocket.
-
-Le Guilloux, Vincent, Peter Schmidtke, and Pierre Tuffery. "Fpocket: an open source platform for ligand pocket detection." BMC bioinformatics 10 (2009): 1-11.
-
 ## Usage
 
 ```javascript
@@ -97,6 +92,12 @@ let sequence2 = 'MLAVSAAAGAAGGAAAAGGAUGA';
 // Define your scoring parameters
 let gapOpen = -12;
 let gapExtend = -1;
+
+
+## Pocket annotations
+For pocket detection and assigment, pockets are detected on AlphaFold structures using [fpocket](https://github.com/Discngine/fpocket). Pockets are ranked according the the computed fpocket druggability score, and if a residue participates in multiple pockets, it is annotated with the pocket with the highest druggability score. fpocket computes the list of residues which form the boundaries of a pocket as part of its computation. Metadata computed by fpocket is shown in the portal for each pocket. The metadata shown is: druggability score, pocket volume in cubic angstroms and the mean pLDDT of residues making up the pocket.
+
+Le Guilloux, Vincent, Peter Schmidtke, and Pierre Tuffery. "Fpocket: an open source platform for ligand pocket detection." BMC bioinformatics 10 (2009): 1-11.
 
 // Call the Needleman-Wunsch function with the specified arguments
 let result = needlemanWunsch(sequence1, sequence2, { gapOpen, gapExtend });
