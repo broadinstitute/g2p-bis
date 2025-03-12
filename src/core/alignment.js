@@ -1,4 +1,4 @@
-import BLASTP from "../constants/blastp";
+import BLASTP from "../constants/blastp.js";
 
 function isoform_match_score_fn(residue1, residue2) {
   if (residue1 === residue2) {

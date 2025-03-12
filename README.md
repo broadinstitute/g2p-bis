@@ -83,7 +83,7 @@ Cock, P.J.A. et al. Biopython: freely available Python tools for computational m
 
 ```javascript
 // Import the Needleman-Wunsch function from alignment.js
-const { needlemanWunsch } = require('./core/alignment.js');
+const { needlemanWunsch } = await import('./src/core/alignment.js');
 
 // Define your protein sequences
 let sequence1 = 'MALSASPCANGAGGAEGGAAAAGGAUGA';
