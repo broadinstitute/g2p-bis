@@ -5,7 +5,7 @@
 A suite of tools and algorithms used by [Genomics 2 Proteins portal](https://g2p.broadinstitute.org) to integrate and align genomics and protein data.
 
 ## How to cite
-If you use Genomics 2 Protein portal, please cite [the paper](https://www.nature.com/articles/s41592-024-02409-0):
+If you use G2P-BIS (Genomics To Proteins - Bio Integration Suite), please cite [the paper](https://www.nature.com/articles/s41592-024-02409-0):
 
 - *Kwon, S., Safer, J., Nguyen, D.T. et al. Genomics 2 Proteins portal: a resource and discovery tool for linking genetic screening outputs to protein sequences and structures. Nat Methods 21, 1947–1957 (2024), [https://doi.org/10.1101/2024.01.02.573913](https://doi.org/10.1101/2024.01.02.573913)*
 
