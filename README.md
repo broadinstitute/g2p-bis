@@ -106,7 +106,17 @@ console.log(result);
 
 ## Pocket annotations
 
-For pocket detection and assigment, pockets are detected on AlphaFold structures using [fpocket](https://github.com/Discngine/fpocket). Pockets are ranked according the the computed fpocket druggability score, and if a residue participates in multiple pockets, it is annotated with the pocket with the highest druggability score. fpocket computes the list of residues which form the boundaries of a pocket as part of its computation. Metadata computed by fpocket is shown in the portal for each pocket. The metadata shown is: druggability score, pocket volume in cubic angstroms and the mean pLDDT of residues making up the pocket.
+For pocket detection and assignment, three methods are used on AlphaFold structures: fpocket, P2Rank, and AF2Bind.
 
-Le Guilloux, Vincent, Peter Schmidtke, and Pierre Tuffery. "Fpocket: an open source platform for ligand pocket detection." BMC bioinformatics 10 (2009): 1-11.
+- **fpocket**: Pockets are ranked according the the computed fpocket druggability score, and if a residue participates in multiple pockets, it is annotated with the pocket with the highest druggability score. fpocket computes the list of residues which form the boundaries of a pocket as part of its computation. Metadata computed by fpocket is shown in the portal for each pocket. The metadata shown is: druggability score, pocket volume in cubic angstroms and the mean pLDDT of residues making up the pocket.
+- **P2Rank**: Binding sites detected by analyzing protein surface through generating SAS (solvent-accessible surface) points and assigning chemico-physical properties based on their surroundings. Ligandability score of individual points is determined by a machine learning model trained on a dataset of known protein-ligand complexes. Residues are labeled as binding based on ligandibility score of the surrounding SAS points.
+- **AF2Bind**: AlphaFold2’s internal representations are utilized to predict specific binding residues. It uses 20 "bait" amino acids as surrogates for a small-molecule ligand to extract binding signals in the absence of a true ligand. The tool outputs a probability, P(bind), for each residue.
+
+### References
+
+- *Le Guilloux, Vincent, Peter Schmidtke, and Pierre Tuffery. "Fpocket: an open source platform for ligand pocket detection." BMC bioinformatics 10 (2009): 1-11.*
+
+- *Radoslav Krivak, and David Hoksza. "P2Rank: machine learning based tool for rapid and accurate prediction of ligand binding sites from protein structure." Journal of Cheminformatics 10 (2018): 1-12.*
+
+- *Artem Gazizov, Anna Lian, Casper Goverde, Sergey Ovchinnikov, and Nicholas F. Polizzi. "AF2BIND: Predicting ligand-binding sites using the pair representation of AlphaFold2." bioRxiv (2023)*
 
