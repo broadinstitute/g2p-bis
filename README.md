@@ -128,5 +128,5 @@ In [fpocket](https://github.com/Discngine/fpocket), pockets are ranked according
 | Metadata field | Description | Range |
 | ----------- | ----------- | ----------- |
 | Rank | Numerical index of the pocket sorted by Probability score (Rank 1 is the most likely binding site) | 1 to N |
-| Probability | Aggregated binding probability of the pocket SAS points | 0 to 1 |
+| Probability | Probability of pocket being a ligand-binding site | 0 to 1 |
 | Mean pLDDT | Average AlphaFold confidence of pocket residues | 0 to 100 |
