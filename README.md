@@ -106,7 +106,27 @@ console.log(result);
 
 ## Pocket annotations
 
-For pocket detection and assigment, pockets are detected on AlphaFold structures using [fpocket](https://github.com/Discngine/fpocket). Pockets are ranked according the the computed fpocket druggability score, and if a residue participates in multiple pockets, it is annotated with the pocket with the highest druggability score. fpocket computes the list of residues which form the boundaries of a pocket as part of its computation. Metadata computed by fpocket is shown in the portal for each pocket. The metadata shown is: druggability score, pocket volume in cubic angstroms and the mean pLDDT of residues making up the pocket.
+For pocket detection, two methods are used on AlphaFold structures: fpocket, P2Rank. Various metadata are reported along with the prediction, described in the tables below.
 
-Le Guilloux, Vincent, Peter Schmidtke, and Pierre Tuffery. "Fpocket: an open source platform for ligand pocket detection." BMC bioinformatics 10 (2009): 1-11.
+### fpocket
+- *Le Guilloux, Vincent, Peter Schmidtke, and Pierre Tuffery. "Fpocket: an open source platform for ligand pocket detection." BMC bioinformatics 10 (2009): 1-11. [https://doi.org/10.1186/1471-2105-10-168](https://doi.org/10.1186/1471-2105-10-168)*
 
+In [fpocket](https://github.com/Discngine/fpocket), pockets are ranked according the the computed fpocket druggability score, and if a residue participates in multiple pockets, it is annotated with the pocket with the highest druggability score. fpocket computes the list of residues which form the boundaries of a pocket as part of its computation.
+
+| Metadata field | Description | Range |
+| ----------- | ----------- | ----------- |
+| Rank | Numerical index of the pocket sorted by Druggability score (Rank 1 is the most "druggable") | 1 to N |
+| Druggability score | Probability of the pocket being a drug-binding site | 0 to 1 |
+| Pocket volume | The total cavity volume in Å<sup>3</sup> | > 0 |
+| Mean pLDDT | Average AlphaFold confidence of pocket residues | 0 to 100 |
+
+### P2Rank
+- *Radoslav Krivak, and David Hoksza. "P2Rank: machine learning based tool for rapid and accurate prediction of ligand binding sites from protein structure." Journal of Cheminformatics 10 (2018): 1-12. [https://doi.org/10.1186/s13321-018-0285-8](https://doi.org/10.1186/s13321-018-0285-8)*
+
+[P2Rank](https://github.com/rdk/p2rank) detects binding sites by analyzing protein surface through generating SAS points (SAS=solvent-accessible surface) and assigning chemico-physical properties based on their surroundings. Ligandability score of individual points is determined by a machine learning model trained on a dataset of known protein-ligand complexes. Residues are labeled as binding based on ligandibility score of the surrounding SAS points.
+
+| Metadata field | Description | Range |
+| ----------- | ----------- | ----------- |
+| Rank | Numerical index of the pocket sorted by Probability score (Rank 1 is the most likely binding site) | 1 to N |
+| Probability | Probability of pocket being a ligand-binding site | 0 to 1 |
+| Mean pLDDT | Average AlphaFold confidence of pocket residues | 0 to 100 |
