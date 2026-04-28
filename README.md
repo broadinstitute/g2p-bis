@@ -130,3 +130,15 @@ In [fpocket](https://github.com/Discngine/fpocket), pockets are ranked according
 | Rank | Numerical index of the pocket sorted by Probability score (Rank 1 is the most likely binding site) | 1 to N |
 | Probability | Probability of pocket being a ligand-binding site | 0 to 1 |
 | Mean pLDDT | Average AlphaFold confidence of pocket residues | 0 to 100 |
+
+### AF2Bind
+- *Artem Gazizov, Anna Lian, Casper Goverde, Jody Mou, Sergey Ovchinnikov, and Nicholas F. Polizzi. "AF2BIND: predicting small-molecule binding sites using the pair representation of AlphaFold2." Nature Methods 23 (2026): 626–635. [https://doi.org/10.1038/s41592-026-03011-2](https://doi.org/10.1038/s41592-026-03011-2)*
+
+AF2Bind utilizes AlphaFold2’s internal representations to predict specific binding residues. It uses 20 "bait" amino acids as surrogates for a small-molecule ligand to extract binding signals in the absence of a true ligand.
+
+| Metadata field | Description | Range |
+| ----------- | ----------- | ----------- |
+| Rank | Numerical index of the pocket sorted by Probability score (Rank 1 is the most likely binding site) | 1 to N |
+| Probability | Probability of residue being a part of a ligand-binding site | 0 to 100% |
+| Mean pLDDT | Average AlphaFold confidence of pocket residues | 0 to 100 |
+
