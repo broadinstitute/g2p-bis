@@ -106,7 +106,7 @@ console.log(result);
 
 ## Pocket annotations
 
-For pocket detection, two methods are used on AlphaFold structures: fpocket, P2Rank. Various metadata are reported along with the prediction, described in the tables below.
+For pocket detection, three methods are used on AlphaFold structures: fpocket, P2Rank, and AF2Bind. Various metadata are reported along with the prediction, described in the tables below.
 
 ### fpocket
 - *Le Guilloux, Vincent, Peter Schmidtke, and Pierre Tuffery. "Fpocket: an open source platform for ligand pocket detection." BMC bioinformatics 10 (2009): 1-11. [https://doi.org/10.1186/1471-2105-10-168](https://doi.org/10.1186/1471-2105-10-168)*
